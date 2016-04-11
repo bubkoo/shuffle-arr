@@ -1,3 +1,5 @@
+'use strict';
+
 var char   = require('chai');
 var expect = char.expect;
 
@@ -80,6 +82,18 @@ describe('shuffle-arr: ', function () {
 
     it('shuffle(function () {}) -> throws an Error', function () {
         var fn = shuffle.bind(function () {})
+
+        expect(fn).to.throw(Error);
+        expect(fn).to.throw(TypeError);
+        expect(fn).to.throw(/should be an array or arrayLike/);
+    });
+
+    it('shuffle(window) -> throws an Error', function () {
+        var arr = {};
+
+        arr.window = arr;
+
+        var fn = shuffle.bind(arr)
 
         expect(fn).to.throw(Error);
         expect(fn).to.throw(TypeError);
