@@ -33,7 +33,9 @@ shuffle([1, 2, 3, 4, 5], { copy: true });
 
 ### shuffle(arr, [options])
 
-`arr` an array or an array like object. If `arr` is an array like object or `options.copy` is `true`, then return a shuffled copy of the given array.
+`arr` an array or an array like object. 
+
+If `arr` is an array like object or `options.copy` is `true`, then return a shuffled copy.
 
 
 ## Related
