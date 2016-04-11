@@ -1,13 +1,20 @@
 'use strict';
 
-function shuffle(arr, options) {
+var isArrayLike = require('is-array-like');
+
+function isArray(val) {
+    return Object.prototype.toString.call(val) === '[object Array]';
+}
+
+
+module.exports = function (arr, options) {
 
     if (!arr || !isArrayLike(arr)) {
         throw new TypeError('`arr` should be an array or arrayLike.');
     }
 
     // arrayLike will always create a copy
-    var result = !Array.isArray(arr) || options && options.copy === true
+    var result = !isArray(arr) || options && options.copy === true
         ? [].slice.call(arr)
         : arr;
 
@@ -25,18 +32,4 @@ function shuffle(arr, options) {
     }
 
     return result;
-}
-
-function isArrayLike(obj) {
-
-    if (typeof obj === 'function' || obj === obj.window) {
-        return false;
-    }
-
-    var length = 'length' in obj && obj.length;
-
-    return length === 0 || typeof length === 'number' && length > 0 && (length - 1) in obj;
-}
-
-
-module.exports = shuffle;
+};

@@ -40,5 +40,8 @@
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.2",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "is-array-like": "0.0.0"
   }
 }
