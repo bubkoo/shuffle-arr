@@ -2,12 +2,13 @@
 
 > Randomize the order of the elements in a given array(arrayLike).
 
-
-
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/shuffle-arr/blob/master/LICENSE)
 
 [![build:?](https://img.shields.io/travis/bubkoo/shuffle-arr/master.svg?style=flat-square)](https://travis-ci.org/bubkoo/shuffle-arr)
 [![coverage:?](https://img.shields.io/coveralls/bubkoo/shuffle-arr/master.svg?style=flat-square)](https://coveralls.io/github/bubkoo/shuffle-arr)
+
+
+Heavily inspirated by [Fisher–Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
 
 ## Install
