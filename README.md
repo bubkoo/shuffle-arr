@@ -1,6 +1,6 @@
 # shuffle-arr
 
-> Randomize the order of the elements in a given array(arrayLike).
+> Randomize the order of the elements in a given array(array like object).
 
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/shuffle-arr/blob/master/LICENSE)
 
