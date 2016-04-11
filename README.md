@@ -1,2 +1,3 @@
 # shuffle-array
-Randomize the order of the elements in a given array.
+
+> Randomize the order of the elements in a given array(arrayLike).
