@@ -1,6 +1,6 @@
 # shuffle-arr
 
-> Randomize the order of the elements in a given array(array like object).
+> Randomize the order of the elements in an array(array like object).
 
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/bubkoo/shuffle-arr/blob/master/LICENSE)
 
@@ -40,3 +40,7 @@ If `arr` is an array like object or `options.copy` is `true`, then return a shuf
 
 
 ## Related
+
+- [pick-some](https://github.com/bubkoo/pick-some) - Randomly sampling some item(s) from an array(array like object).
+- [pick-some-keys](https://github.com/bubkoo/pick-some-keys) - Randomly sampling some key(s) from an object.
+- [pick-some-values](https://github.com/bubkoo/pick-some-values) - Randomly sampling some property(s) from an object.

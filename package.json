@@ -1,7 +1,7 @@
 {
   "name": "shuffle-arr",
-  "version": "0.0.0",
-  "description": "Randomize the order of the elements in a given array(array like object).",
+  "version": "1.0.0",
+  "description": "Randomize the order of the elements in an array(array like object).",
   "main": "index.js",
   "scripts": {
     "lint": "jshint index.js",
@@ -42,6 +42,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "is-array-like": "0.0.0"
+    "is-array-like": "1.0.0",
+    "isarray": "^1.0.0"
   }
 }
