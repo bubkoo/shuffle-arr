@@ -1,6 +1,6 @@
 'use strict';
 
-var isArray     = require('isarray');
+var isArray     = require('is-array');
 var isArrayLike = require('is-array-like');
 
 

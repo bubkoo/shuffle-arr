@@ -42,7 +42,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "is-array-like": "1.0.0",
-    "isarray": "^1.0.0"
+    "is-array": "^1.0.1",
+    "is-array-like": "1.0.0"
   }
 }
