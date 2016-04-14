@@ -7,11 +7,11 @@ var isArrayLike = require('is-array-like');
 module.exports = function (arr, options) {
 
   if (!arr || !isArrayLike(arr)) {
-    throw new TypeError('Argument error: an array or array like object is expected.');
+    return arr;
   }
 
   // arrayLike will always create a copy
-  var result = !isArray(arr) || options && options.copy === true
+  var result = (!isArray(arr) || options && options.copy === true)
     ? [].slice.call(arr)
     : arr;
 
@@ -28,5 +28,5 @@ module.exports = function (arr, options) {
     result[random] = temp;
   }
 
-  return result;
+  return typeof arr === 'string' ? result.join('') : result;
 };

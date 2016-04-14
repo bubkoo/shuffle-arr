@@ -1,12 +1,11 @@
 'use strict';
 
-var char   = require('chai');
-var expect = char.expect;
+var expect = require('chai').expect;
 
 
 describe('shuffle-arr: ', function () {
 
-  var shuffle = require('../../index');
+  var shuffle = require('../../');
 
   it('shuffle([1, 2, 4])', function () {
 
@@ -41,62 +40,14 @@ describe('shuffle-arr: ', function () {
     worker(1, 2, 3);
   });
 
-  it('shuffle() -> throws an Error', function () {
-    expect(shuffle).to.throw(Error);
-    expect(shuffle).to.throw(TypeError);
-    expect(shuffle).to.throw(/array or array like object/);
+  it('shuffle("abcdefg")', function () {
+    expect(shuffle('abcdefg')).to.have.length(7);
   });
 
-  it('shuffle(null) -> throws an Error', function () {
-
-    var fn = shuffle.bind(null)
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
-  });
-
-  it('shuffle(1) -> throws an Error', function () {
-    var fn = shuffle.bind(1)
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
-  });
-
-  it('shuffle("abc") -> throws an Error', function () {
-    var fn = shuffle.bind("abc")
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
-  });
-
-  it('shuffle({}) -> throws an Error', function () {
-    var fn = shuffle.bind({})
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
-  });
-
-  it('shuffle(function () {}) -> throws an Error', function () {
-    var fn = shuffle.bind(function () {})
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
-  });
-
-  it('shuffle(window) -> throws an Error', function () {
-    var arr = {};
-
-    arr.window = arr;
-
-    var fn = shuffle.bind(arr)
-
-    expect(fn).to.throw(Error);
-    expect(fn).to.throw(TypeError);
-    expect(fn).to.throw(/array or array like object/);
+  it('others', function () {
+    expect(shuffle()).to.be.undefined;
+    expect(shuffle(null)).to.be.null;
+    expect(shuffle(1)).to.be.equal(1);
+    expect(shuffle({ foo: 'bar' })).to.be.eql({ foo: 'bar' });
   });
 });

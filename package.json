@@ -1,7 +1,7 @@
 {
   "name": "shuffle-arr",
   "version": "1.0.0",
-  "description": "Randomize the order of the elements in an array(array like object).",
+  "description": "Randomize the order of the elements in array or array-like object.",
   "main": "index.js",
   "scripts": {
     "lint": "jshint index.js",
@@ -12,10 +12,10 @@
     "prepublish": "npm test"
   },
   "keywords": [
-    "array",
-    "arr",
-    "arrayLike",
     "shuffle",
+    "array",
+    "arrayLike",
+    "arr",
     "random",
     "randomly",
     "randomize",
@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "is-array": "^1.0.1",
-    "is-array-like": "1.0.0"
+    "is-array-like": "^1.1.0"
   }
 }
